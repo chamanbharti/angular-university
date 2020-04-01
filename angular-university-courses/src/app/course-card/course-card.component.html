@@ -1,0 +1,248 @@
+<!--<div class="course-card" *ngIf="course">-->
+<!--    Angular Core Deep Dive-->
+<!--    {{title}}-->
+<!--    {{course.description}}-->
+<!--  <img width="300" alt="Angular Logo" src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png">-->
+<!--  <img width="300" alt="Angular Logo" [src]="course.iconUrl">-->
+<!--</div>-->
+
+<!--<div class="course-card" *ngIf="course">-->
+
+<!--  <div class="course-title">-->
+<!--    {{cardIndex+' '+course?.description}}-->
+<!--  </div>-->
+
+<!--  <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--  <ng-template #noImage>-->
+<!--    <p>No image is available.</p>-->
+<!--  </ng-template>-->
+<!--  <div class="course-description">-->
+<!--    &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--    {{course?.longDescription}}-->
+<!--  </div>-->
+<!--  <button (click)="onCourseViewed()">View Course</button>-->
+<!--</div>-->
+
+<!--ngClass-->
+<!--<div class="course-card" *ngIf="course">-->
+<!--<div class="course-card" *ngIf="course" [ngClass]="'beginner'">-->
+<!--<div class="" *ngIf="course" [ngClass]="['beginner','course-card']">-->
+<!--<div class="course-card" *ngIf="course" [ngClass]="{'beginner':true,'course-card':true}">-->
+<!--<div class="course-card" *ngIf="course" [ngClass]="{'beginner':false,'course-card':true}">-->
+
+<!--<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--  <div class="course-title">-->
+<!--    {{cardIndex+' '+course?.description}}-->
+<!--  </div>-->
+
+<!--  <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--  <ng-template #noImage>-->
+<!--    <p>No image is available.</p>-->
+<!--  </ng-template>-->
+<!--  <div class="course-description">-->
+<!--    &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--    {{course?.longDescription}}-->
+<!--  </div>-->
+<!--  <button (click)="onCourseViewed()">View Course</button>-->
+<!--</div>-->
+
+<!--ngStyle-->
+<!--<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--&lt;!&ndash;  <div class="course-title" [style.text-decoration]="'underline'">&ndash;&gt;-->
+<!--&lt;!&ndash;    {{cardIndex+' '+course?.description}}&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="course-title" [ngStyle]="{'text-decoration':'underline'}">&ndash;&gt;-->
+<!--&lt;!&ndash;    {{cardIndex+' '+course?.description}}&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--  <div class="course-title" [ngStyle]="cardStyles()">-->
+<!--    {{cardIndex+' '+course?.description}}-->
+<!--  </div>  -->
+
+<!--  <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--  <ng-template #noImage>-->
+<!--    <p>No image is available.</p>-->
+<!--  </ng-template>-->
+<!--  <div class="course-description">-->
+<!--    &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--    {{course?.longDescription}}-->
+<!--  </div>-->
+<!--  <button (click)="onCourseViewed()">View Course</button>-->
+<!--</div>-->
+
+<!--ngSwitch-->
+<!--<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--  <div class="course-title">-->
+<!--    {{cardIndex+' '+course?.description}}-->
+<!--  </div>-->
+
+<!--  <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--  <ng-template #noImage>-->
+<!--    <p>No image is available.</p>-->
+<!--  </ng-template>-->
+<!--  <div class="course-description">-->
+<!--    &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--    {{course?.longDescription}}-->
+<!--  </div>-->
+<!--  <div class="course-category" [ngSwitch]="course.category">-->
+<!--    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>-->
+<!--    <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>-->
+<!--    <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>-->
+<!--    <div class="category" *ngSwitchDefault>All levels</div>-->
+<!--  </div>-->
+<!--  <button (click)="onCourseViewed()">View Course</button>-->
+<!--</div>-->
+
+<!--ng-container-->
+<!--<ng-container *ngIf="course">-->
+<!--  <div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--    <div class="course-title">-->
+<!--      {{cardIndex+' '+course?.description}}-->
+<!--    </div>-->
+
+<!--    <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--    <ng-template #noImage>-->
+<!--      <p>No image is available.</p>-->
+<!--    </ng-template>-->
+<!--    <div class="course-description">-->
+<!--      &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--      {{course?.longDescription}}-->
+<!--    </div>-->
+<!--    <ng-container [ngSwitch]="course.category">-->
+<!--      <div class="course-category" >-->
+<!--        <ng-container  *ngSwitchCase="'BEGINNER'">-->
+<!--          <div class="category">Beginner</div>-->
+<!--        </ng-container>-->
+<!--        <ng-container *ngSwitchCase="'INTERMEDIATE'">-->
+<!--          <div class="category">INTERMEDIATE</div>-->
+<!--        </ng-container>-->
+<!--&lt;!&ndash;        <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>&ndash;&gt;-->
+<!--        <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>-->
+<!--        <div class="category" *ngSwitchDefault>All levels</div>-->
+<!--      </div>-->
+<!--    </ng-container>-->
+
+<!--    <button (click)="onCourseViewed()">View Course</button>-->
+<!--  </div>-->
+<!--</ng-container>-->
+
+<!--viewChild and viewChildren-->
+<!--<ng-container *ngIf="course">-->
+<!--  <div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--    <div class="course-title">-->
+<!--      {{cardIndex || ''+' '+course?.description}}-->
+<!--    </div>-->
+
+<!--    <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--    <ng-template #noImage>-->
+<!--      <p>No image is available.</p>-->
+<!--    </ng-template>-->
+<!--    <div class="course-description">-->
+<!--      &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--      {{course?.longDescription}}-->
+<!--    </div>-->
+<!--    <ng-container [ngSwitch]="course.category">-->
+<!--      <div class="course-category" >-->
+<!--        <ng-container  *ngSwitchCase="'BEGINNER'">-->
+<!--          <div class="category">Beginner</div>-->
+<!--        </ng-container>-->
+<!--        <ng-container *ngSwitchCase="'INTERMEDIATE'">-->
+<!--          <div class="category">INTERMEDIATE</div>-->
+<!--        </ng-container>-->
+<!--        &lt;!&ndash;        <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>&ndash;&gt;-->
+<!--        <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>-->
+<!--        <div class="category" *ngSwitchDefault>All levels</div>-->
+<!--      </div>-->
+<!--    </ng-container>-->
+
+<!--    <button (click)="onCourseViewed()">View Course</button>-->
+<!--  </div>-->
+<!--</ng-container>-->
+
+<!--ContentChild-->
+<!--<ng-container *ngIf="course" #container>-->
+<!--  <div class="course-card" *ngIf="course" [ngClass]="cardClasses()">-->
+<!--    <div class="course-title">-->
+<!--      {{cardIndex || ''+' '+course?.description}}-->
+<!--    </div>-->
+
+<!--    <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage" [src]="course.iconUrl">-->
+<!--    <ng-template #noImage>-->
+<!--      <p>No image is available.</p>-->
+<!--    </ng-template>-->
+<!--    replace with ng-content-->
+<!--    <ng-content select=".course-image"></ng-content>-->
+
+<!--    <div class="course-description">-->
+<!--      &lt;!&ndash;    A detailed walk-through of the most important part of Angular - the Core and Common modules.&ndash;&gt;-->
+<!--      {{course?.longDescription}}-->
+<!--    </div>-->
+<!--<ng-content select=".course-description"></ng-content>-->
+
+    <!--    using contentChildren-->
+<!--    <ng-content select=".course-image"></ng-content>-->
+<!--    <ng-content select=".course-description"></ng-content>-->
+<!--    <ng-content></ng-content>-->
+<!--    <ng-container [ngSwitch]="course.category">-->
+<!--      <div class="course-category" >-->
+<!--        <ng-container  *ngSwitchCase="'BEGINNER'">-->
+<!--          <div class="category">Beginner</div>-->
+<!--        </ng-container>-->
+<!--        <ng-container *ngSwitchCase="'INTERMEDIATE'">-->
+<!--          <div class="category">INTERMEDIATE</div>-->
+<!--        </ng-container>-->
+<!--        &lt;!&ndash;        <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>&ndash;&gt;-->
+<!--        <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>-->
+<!--        <div class="category" *ngSwitchDefault>All levels</div>-->
+<!--      </div>-->
+<!--    </ng-container>-->
+
+<!--    <button (click)="onCourseViewed()">View Course</button>-->
+<!--  </div>-->
+<!--</ng-container>-->
+
+<!--ng-template-->
+<!--<div class="course-card" *ngIf="course" #container>-->
+<!--    <div class="course-title">-->
+<!--      {{cardIndex || ''+' '+course?.description}}-->
+<!--    </div>-->
+
+<!--      <ng-content select=".course-image" *ngIf="course.iconUrl; else blankImage"></ng-content>-->
+<!--      <ng-content select=".course-description"></ng-content>-->
+<!--      <ng-template #blankImage>-->
+<!--        <p class="warn">{{course.description}} has no image yet.</p>-->
+<!--        <img src="/angular-university-courses/src/assets/empty-image.png">-->
+<!--      </ng-template>-->
+<!--      <div class="course-category" [ngSwitch]="course.category" >-->
+<!--          <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>-->
+
+<!--          <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>-->
+<!--        &lt;!&ndash;        <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>&ndash;&gt;-->
+<!--        <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>-->
+<!--        <div class="category" *ngSwitchDefault>All levels</div>-->
+<!--      </div>-->
+
+<!--    <button (click)="onCourseViewed()">View Course</button>-->
+<!--</div>-->
+
+<!--ng-templateoutlet-->
+<div class="course-card" *ngIf="course" #container>
+  <div class="course-title">
+    {{cardIndex || ''+' '+course?.description}}
+  </div>
+
+  <ng-content select=".course-image" *ngIf="course.iconUrl; else noImage"></ng-content>
+  <ng-content select=".course-description"></ng-content>
+  <ng-template #noImage>
+    <ng-container *ngTemplateOutlet="noImageTpl;context:{description:course.description}"></ng-container>
+  </ng-template>
+  <div class="course-category" [ngSwitch]="course.category" >
+    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+
+    <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>
+    <!--        <div class="category" *ngSwitchCase="'INTERMEDIATE'">INTERMEDIATE</div>-->
+    <div class="category" *ngSwitchCase="'ADVANCED'">ADVANCED</div>
+    <div class="category" *ngSwitchDefault>All levels</div>
+  </div>
+
+  <button (click)="onCourseViewed()">View Course</button>
+</div>

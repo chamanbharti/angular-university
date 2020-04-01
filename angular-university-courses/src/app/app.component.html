@@ -1,0 +1,314 @@
+
+<div class="top-menu">
+    <img class="logo"
+         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+<!--<h1>{{rxjsCourse.description}}</h1>-->
+<!--<div class="courses">-->
+<!--    <app-course-card [title]="coreCourse.description"></app-course-card>-->
+<!--    <app-course-card [title]="rxjsCourse.description"></app-course-card>-->
+<!--    <app-course-card [title]="ngrxCourse.description"></app-course-card>-->
+
+<!--  <app-course-card [course]="coreCourse"></app-course-card>-->
+<!--  <app-course-card [course]="rxjsCourse"></app-course-card>-->
+<!--  <app-course-card [course]="ngrxCourse"></app-course-card>-->
+
+<!--  <app-course-card (click)="onCardClicked()" [course]="coreCourse"></app-course-card>-->
+<!--  <app-course-card [course]="rxjsCourse"></app-course-card>-->
+<!--  <app-course-card [course]="ngrxCourse"></app-course-card>-->
+
+<!--  before using ngFor directive-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)"  [course]="rxjsCourse"></app-course-card>-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)"  [course]="ngrxCourse"></app-course-card>-->
+
+<!--  after using ngFor structural directive-->
+<!--  <app-course-card *ngFor="let course of courses"-->
+<!--    (courseSelected)="onCourseSelected($event)"  [course]="course"></app-course-card>-->
+<!--</div>-->
+
+<!--  <app-course-card *ngFor="let course of courses;index as i" [cardIndex]="i+1"-->
+<!--                   (courseSelected)="onCourseSelected($event)"  [course]="course"></app-course-card>-->
+
+<!--  <app-course-card *ngFor="let course of courses;index as i;first as isFirst;last as isLast;even as isEven;odd as isOdd;"-->
+<!--        [class.is-first]="isFirst"-->
+<!--        [class.is-last]="isLast"-->
+<!--        [class.is-even]="isEven"-->
+<!--        [class.is-odd]="isOdd"-->
+<!--        [cardIndex]="i+1"-->
+<!--        (courseSelected)="onCourseSelected($event)"  [course]="course"></app-course-card>-->
+
+
+<!--  <app-course-card *ngFor="let course of courses;index as i;first as isFirst;last as isLast;even as isEven;odd as isOdd;"-->
+<!--                   [class.is-first]="isFirst"-->
+<!--                   [class.is-last]="isLast"-->
+<!--                   [class.is-even]="isEven"-->
+<!--                   [class.is-odd]="isOdd"-->
+<!--                   [cardIndex]="i+1"-->
+<!--                   (courseSelected)="onCourseSelected($event)"  [course]="course"></app-course-card>-->
+<!--</div>-->
+
+<!--Using Pipe-->
+<!--<div class="demo">-->
+<!--  Start Date:Sat Jan 01 2000 00:00:00 GMT+0530 (India Standard Time)-->
+<!--  <div>Start Date:{{startDate}}</div>-->
+
+<!--  Start Date:Jan 1, 2000-->
+<!--  <div>Start Date:{{startDate | date}}</div>-->
+
+<!--  Start Date:01/01/2000-->
+<!--  <div>Start Date:{{startDate | date: 'MM/dd/yyyy'}}</div>-->
+
+<!--  Start Date:Jan/01/2000-->
+<!--  <div>Start Date:{{startDate | date: 'MMM/dd/yyyy'}}</div>-->
+
+  <!--  Start Date:Jan 01 2000-->
+<!--  <div>Start Date:{{startDate | date: 'MMM dd yyyy'}}</div>-->
+
+<!--  009.99672-->
+<!--  <div>{{price | number: '3.3-5'}}</div>-->
+
+<!--  <div>{{price | currency}}</div>-->
+<!--  <div>{{price | currency: 'EUR'}}</div>-->
+<!--  <div>{{price | currency: 'GBP'}}</div>-->
+
+<!--  <div>Percentage:{{rate | percent}}</div>-->
+
+<!--  <div>json:{{courses | json}}</div>-->
+<!--  <div *ngFor="let pair of course | keyvalue">-->
+<!--    {{pair.key + ':' + pair.value}}-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="courses">-->
+<!--&lt;!&ndash;      <app-course-card *ngFor="let course of courses | slice:1:2; index as i"&ndash;&gt;-->
+<!--          <app-course-card *ngFor="let course of courses | slice:0:2; index as i"-->
+<!--           (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1">-->
+<!--           </app-course-card>-->
+
+<!--</div>-->
+
+<!--viewChild and viewChildren-->
+<!--<div class="courses">-->
+<!--    <app-course-card (courseSelected)="onCourseSelected($event)" [course]="courses[0]">-->
+<!--    </app-course-card>-->
+<!--</div>-->
+
+<!--<div class="courses">-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="courses[0]">-->
+<!--  </app-course-card>-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="courses[1]">-->
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--<div class="courses">-->
+<!--    <app-course-card (courseSelected)="onCourseSelected($event)" [course]="courses[0]">-->
+<!--    </app-course-card>-->
+<!--    <app-course-card #cardRef (courseSelected)="onCourseSelected($event)" [course]="courses[0]">-->
+<!--    </app-course-card>-->
+<!--</div>-->
+
+<!--<div class="courses" #container>-->
+<!--  <app-course-card #cardRef1 (courseSelected)="onCourseSelected($event)" [course]="courses[0]">-->
+<!--  </app-course-card>-->
+<!--  <app-course-card #cardRef2 (courseSelected)="onCourseSelected($event)" [course]="courses[1]">-->
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--viewChildren-->
+<!--<button (click)="onCourseEdit()">Edit Courses</button>-->
+<!--<div class="courses" #container>-->
+<!--  <app-course-card *ngFor="let course of courses" (courseSelected)="onCourseSelected($event)" [course]="course">-->
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--<div class="courses" *ngIf="courses[0] as course">-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course">-->
+<!--    <div class="course-image"#courseImage>-->
+<!--      <img width="300" alt="Angular Logo" [src]="course.iconUrl">-->
+<!--      <h5>Total Lessons: 5</h5>-->
+<!--    </div>-->
+<!--    <div class="course-description">-->
+<!--      {{course.longDescription}}-->
+<!--    </div>-->
+<!--    Edit Description: <textarea></textarea>-->
+<!--  </app-course-card>-->
+<!--</div>-->
+<!--<div class="courses" *ngIf="courses[1] as course">-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course">-->
+<!--    <h5>Total Lessons: 10</h5>-->
+<!--  </app-course-card>-->
+<!--</div>-->
+<!-- replace with component-->
+<!--<div class="courses" *ngIf="courses[0] as course">-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course">-->
+
+<!--    <app-course-image [src]="course.iconUrl"></app-course-image>-->
+<!--    <app-course-image [src]="courses[1].iconUrl"></app-course-image>-->
+<!--    <app-course-image [src]="courses[2].iconUrl"></app-course-image>-->
+<!--    <div class="course-description">-->
+<!--      {{course.longDescription}}-->
+<!--    </div>-->
+<!--    Edit Description: <textarea></textarea>-->
+<!--  </app-course-card>-->
+<!--</div>-->
+<!--<div class="courses" *ngIf="courses[1] as course">-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course">-->
+<!--    <h5>Total Lessons: 10</h5>-->
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--tempalteoutlet-->
+<!--<div class="courses" *ngIf="courses[0] as course">-->
+<!--  <ng-template #blankImage let-courseName="descripton">-->
+<!--    <p class="warn">{{courseName}} has no image yet.</p>-->
+<!--    <img src="/angular-university-courses/src/assets/empty-image.png">-->
+<!--  </ng-template>-->
+<!--  <div *ngTemplateOutlet="blankImage; context: {descripton: course.description}">-->
+
+<!--  </div>-->
+<!--  <ng-container *ngTemplateOutlet="blankImage; context: {descripton: courses[1].description}">-->
+
+<!--</ng-container>-->
+<!--  <hr><hr>-->
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course">-->
+
+<!--    <app-course-image [src]="course.iconUrl"></app-course-image>-->
+<!--    <div class="course-description">{{course.longDescription}}</div>-->
+
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--ng-template-input-->
+<!--<div class="courses" *ngIf="courses[0] as course">-->
+<!--  <ng-template #blankImage let-courseName="descripton">-->
+<!--    <p class="warn">{{courseName}} has no image yet.</p>-->
+<!--    <img src="/angular-university-courses/src/assets/empty-image.png">-->
+<!--  </ng-template>-->
+
+
+<!--  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="course" [noImageTpl]="blankImage">-->
+
+<!--    <app-course-image [src]="course.iconUrl"></app-course-image>-->
+<!--    <div class="course-description">{{course.longDescription}}</div>-->
+
+<!--  </app-course-card>-->
+<!--</div>-->
+
+<!--directive-->
+<!-- <div class="courses" *ngIf="courses[0] as course"> -->
+  <!-- <app-course-card highlighted (courseSelected)="onCourseSelected($event)" [course]="course"> -->
+  <!-- <app-course-card [highlighted]="false" (courseSelected)="onCourseSelected($event)" [course]="course"> -->
+    <!-- <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+     [course]="course">
+    <app-course-image [src]="course.iconUrl"></app-course-image>
+
+    <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+
+  </app-course-card>
+  <app-course-card highlighted [course]="courses[2]"></app-course-card>
+</div> -->
+<!-- 
+<ng-template [ngIf]="!courses[0]" let-course>
+  <div class="courses">
+      <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+       [course]="course">
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+  
+      <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+  
+    </app-course-card>
+    <app-course-card highlighted [course]="courses[2]"></app-course-card>
+  </div>
+</ng-template> -->
+
+<!-- 
+<ng-template [ngIf]="courses[0]" let-course>
+  <div class="courses">
+      <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+       [course]="course">
+      <app-course-image [src]="course.iconUrl" *ngxUnless="!course.iconUrl"></app-course-image>
+  
+      <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+  
+    </app-course-card>
+    <app-course-card highlighted [course]="courses[2]"></app-course-card>
+  </div>
+</ng-template> -->
+
+
+<!-- <ng-template [ngIf]="courses[0]" let-course>
+  <div class="courses">
+      <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+       [course]="course">
+     <ng-template [ngxUnless]="!course.iconUrl">
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+     </ng-template>
+  
+      <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+  
+    </app-course-card>
+    <app-course-card highlighted [course]="courses[2]"></app-course-card>
+  </div>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]="courses[0]" let-course>
+  <div class="courses">
+      <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+       [course]="course">
+     
+      <app-course-image [src]="course.iconUrl" *ngxUnless="course.iconUrl"></app-course-image>
+    
+  
+      <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+  
+    </app-course-card>
+    <app-course-card highlighted [course]="courses[2]"></app-course-card>
+  </div>
+</ng-template> -->
+
+<!-- view incapsulation -->
+<!-- <ng-template [ngIf]="courses[0]" let-course>
+  <div class="courses">
+      <app-course-card highlighted  #highlighter="hl" (courseSelected)="onCourseSelected($event)"
+       [course]="course">
+     
+      <app-course-image [src]="course.iconUrl" *ngxUnless="course.iconUrl"></app-course-image>
+    
+  
+      <div class="course-description" (dblclick)="highlighter.toggle()">{{course.longDescription}}</div>
+  
+    </app-course-card>
+    <app-course-card highlighted [course]="courses[2]"></app-course-card>
+  </div>
+</ng-template> -->
+
+<!--Service-->
+  <!-- <div>
+    <div class="courses">
+      <app-course-card *ngFor="let course of courses" [course]="course">
+     
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+  
+    </app-course-card>
+  </div>
+  </div> -->
+
+  <!-- <div>
+    <div class="courses">
+      <app-course-card *ngFor="let course of (courses$ | async)" [course]="course">
+     
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+  
+    </app-course-card>
+  </div>
+  </div> -->
+  <div>
+    <div class="courses" *ngIf="courses$ | async as courses">
+      <app-course-card *ngFor="let course of courses" [course]="course">
+     
+      <app-course-image [src]="course.iconUrl"></app-course-image>
+  
+    </app-course-card>
+  </div>
+  </div>

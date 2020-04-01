@@ -1,0 +1,15 @@
+
+<html>
+    <body>
+        <script>
+            //Example: Function Expression
+                alert(foo()); // ERROR! foo wasn't loaded yet
+                var foo = function() { return 5; }
+
+                //Example: Function Declaration
+                alert(foo()); // Alerts 5. Declarations are loaded before any code can run.
+                function foo() { return 50; }
+        </script>
+    </body>
+
+</html>

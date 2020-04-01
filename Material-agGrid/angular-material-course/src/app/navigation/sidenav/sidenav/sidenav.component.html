@@ -1,0 +1,139 @@
+<!-- <h1>Basic sidenav</h1>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content mode="side" opened>Sidenav content</mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+<!-- <h1>Basic drawer</h1>
+<mat-drawer-container class="example-container2">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container> -->
+
+<!-- <h1>Implicit main content with two sidenavs</h1> -->
+<!-- <mat-sidenav-container class="example-container3">
+    <mat-sidenav opened mode="side">Start content</mat-sidenav>
+    <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
+    Implicit main content
+</mat-sidenav-container> -->
+<!-- Creates a layout with a left-positioned sidenav and explicit content. -->
+<!-- <mat-sidenav-container class="example-container3">
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav-content>Main</mat-sidenav-content>
+  </mat-sidenav-container> -->
+  <!-- Creates a layout with a left and right sidenav and implicit content. -->
+<!-- <mat-sidenav-container>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav position="end">End</mat-sidenav>
+    <section>Main</section>
+  </mat-sidenav-container> -->
+
+  <!-- <h1>Sidenav open & close behavior</h1>
+  <mat-sidenav-container class="example-container">
+     <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" 
+     (closed)="events.push('close!')">
+         Sidenav content
+     </mat-sidenav>
+     <mat-sidenav-content>
+         <p><mat-checkbox [(ngModel)]="opened"></mat-checkbox>
+            Sidenav opened
+         </p>
+         <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+         <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+     </mat-sidenav-content>
+  </mat-sidenav-container> -->
+  <!-- <h1>Sidenav with configurable mode</h1>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav [mode]="mode.value">
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+      <p>
+        <mat-radio-group class="example-radio-group" [formControl]="mode">
+          <label>Mode:</label>
+          <mat-radio-button value="over">Over</mat-radio-button>
+          <mat-radio-button value="side">Side</mat-radio-button>
+          <mat-radio-button value="push">Push</mat-radio-button>
+        </mat-radio-group>
+      </p>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+      <p>
+        <mat-radio-group class="example-radio-group" [formControl]="mode">
+          <label>Mode:</label>
+          <mat-radio-button value="over">Over</mat-radio-button>
+          <mat-radio-button value="side">Side</mat-radio-button>
+          <mat-radio-button value="push">Push</mat-radio-button>
+        </mat-radio-group>
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+
+  <!-- <mat-drawer-container class="example-containerDrawer" [hasBackdrop]="hasBackdrop.value">
+    <mat-drawer #drawer [mode]="mode.value">I'm a drawer</mat-drawer>
+    <mat-drawer-content>
+      <mat-form-field>
+        <mat-label>Sidenav mode</mat-label>
+        <mat-select #mode value="side">
+          <mat-option value="side">Side</mat-option>
+          <mat-option value="over">Over</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Has backdrop</mat-label>
+        <mat-select #hasBackdrop>
+          <mat-option>Unset</mat-option>
+          <mat-option [value]="true">True</mat-option>
+          <mat-option [value]="false">False</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    </mat-drawer-content>
+  </mat-drawer-container> -->
+  
+  
+  
+  <!-- <mat-toolbar>My App</mat-toolbar>
+  <mat-toolbar>
+    <span>My Application</span>
+  </mat-toolbar>
+
+  <mat-toolbar>  
+    <mat-toolbar-row>
+      <span>First Row</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Row</span>
+    </mat-toolbar-row>
+  </mat-toolbar> -->
+  <!-- <mat-toolbar color="primary">
+    <span>Application Title</span>
+    <span class="example-fill-remaining-space"></span>
+  
+    <span>Right Aligned Text</span>
+  </mat-toolbar> -->
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>  
